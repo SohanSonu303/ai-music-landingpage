@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tertiary-dim: #ff734a;
+  --color-outline: #727675;
+  --color-on-tertiary-fixed-variant: #6f1a00;
+  --color-primary-fixed: #99eecb;
+  --color-on-primary-container: #00291c;
+  --color-surface-variant: #212725;
+  --color-primary-dim: #8bdfbe;
+  --color-primary-fixed-dim: #8bdfbe;
+  --color-on-error-container: #ffa8a3;
+  --color-surface-container-highest: #212725;
+  --color-tertiary-fixed: #ff9475;
+  --color-on-tertiary: #581300;
+  --color-on-secondary-container: #a1e1cf;
+  --color-secondary-dim: #a1e1cf;
+  --color-surface-container-high: #1b211f;
+  --color-error-dim: #d7383b;
+  --color-on-secondary-fixed-variant: #266658;
+  --color-inverse-primary: #076c51;
+  --color-on-surface-variant: #a8acaa;
+  --color-on-tertiary-container: #430c00;
+  --color-primary-container: #5db091;
+  --color-error-container: #9f0519;
+  --color-on-primary-fixed: #004532;
+  --color-surface-bright: #272d2c;
+  --color-surface-dim: #0b0f0e;
+  --color-on-surface: #fafdfa;
+  --color-tertiary-container: #ff734a;
+  --color-primary: #99eecb;
+  --color-on-background: #fafdfa;
+  --color-secondary: #afefdd;
+  --color-surface-container-low: #101413;
+  --color-surface-container: #161b19;
+  --color-on-secondary: #195c4e;
+  --color-secondary-fixed-dim: #a1e1cf;
+  --color-secondary-container: #0b5345;
+  --color-outline-variant: #454947;
+  --color-background: #0b0f0e;
+  --color-surface-container-lowest: #000000;
+  --color-secondary-fixed: #afefdd;
+  --color-error: #ff716c;
+  --color-on-primary: #005a42;
+  --color-on-primary-fixed-variant: #00644b;
+  --color-on-tertiary-fixed: #340700;
+  --color-on-secondary-fixed: #00483c;
+  --color-tertiary: #ff8b69;
+  --color-inverse-on-surface: #525654;
+  --color-on-error: #490006;
+  --color-surface-tint: #99eecb;
+  --color-tertiary-fixed-dim: #ff7d57;
+  --color-inverse-surface: #f7faf8;
+  --color-surface: #0b0f0e;
+
+  --radius: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+
+  --font-headline: var(--font-space-grotesk);
+  --font-body: var(--font-manrope);
+  --font-label: var(--font-space-grotesk);
+  --font-display: var(--font-space-grotesk);
+
+  --letter-spacing-tight: -0.02em;
+}
+
+:root {
+  --background: #0b0f0e;
+  --foreground: #fafdfa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--color-surface-variant) 40%, transparent);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.ambient-shadow {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(170, 255, 220, 0.1), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(255, 115, 74, 0.05), transparent 50%);
+}
+
+.tonal-shift { 
+  background-color: #101413; 
+}
+
+.text-glow { 
+  text-shadow: 0 0 15px rgba(170, 255, 220, 0.4); 
+}
+
+.waveform-bar {
+  width: 3px;
+  background-color: var(--color-primary);
+  margin-right: 1px;
+  border-radius: 2px;
+}
+
+.neon-glow-primary {
+  box-shadow: 0 0 20px rgba(153, 238, 203, 0.2);
+}
+
+.neon-glow-tertiary {
+  box-shadow: 0 0 20px rgba(255, 139, 105, 0.2);
+}
