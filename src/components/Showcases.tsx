@@ -98,17 +98,17 @@ export default function Showcases() {
   };
 
   return (
-    <section id="showcases" className="max-w-7xl mx-auto px-8 py-24 border-t border-outline-variant/10 relative">
+    <section id="showcases" className="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-outline-variant/10 relative">
       <div className="mb-16">
-        <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface mb-4">
+        <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-4">
           Sample <span className="text-primary text-glow">Showcases</span>
         </h2>
-        <p className="text-on-surface-variant max-w-lg">
+        <p className="text-on-surface-variant max-w-lg text-sm md:text-base">
           Experience the output quality across different production formats.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {showcases.map((showcase, index) => (
           <div
             key={index}
@@ -131,7 +131,7 @@ export default function Showcases() {
                   }`}
               >
                 <span
-                  className="material-symbols-outlined"
+                  className="material-symbols-outlined shrink-0"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   {currentTrack?.title === showcase.title && isPlaying ? "pause" : "play_arrow"}
@@ -139,10 +139,10 @@ export default function Showcases() {
               </button>
             </div>
             <div>
-              <h4 className="font-headline text-xl font-bold text-on-surface mb-1">
+              <h4 className="font-headline text-lg md:text-xl font-bold text-on-surface mb-1">
                 {showcase.title}
               </h4>
-              <p className="text-xs text-outline mb-4">{showcase.tags}</p>
+              <p className="text-[10px] md:text-xs text-outline mb-4">{showcase.tags}</p>
               <div className="h-12 flex items-center gap-[2px]">
                 {showcase.waveforms.map((height, i) => (
                   <div
@@ -164,37 +164,37 @@ export default function Showcases() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[60] w-[95%] max-w-3xl"
+            className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-[60] w-[92%] max-w-3xl"
           >
-            <div className="bg-[#0b0f0e]/95 backdrop-blur-3xl ambient-shadow rounded-2xl px-8 py-5 flex items-center gap-8 border border-white/10 ring-1 ring-white/5">
+            <div className="bg-[#0b0f0e]/95 backdrop-blur-3xl ambient-shadow rounded-2xl px-4 md:px-8 py-4 md:py-5 flex items-center gap-3 md:gap-8 border border-white/10 ring-1 ring-white/5">
               <button
                 onClick={togglePlay}
-                className={`w-14 h-14 rounded-full flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-lg ${currentTrack.color === "primary"
+                className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-lg shrink-0 ${currentTrack.color === "primary"
                   ? "bg-primary text-black"
                   : "bg-tertiary text-black"
                   }`}
               >
-                <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                <span className="material-symbols-outlined text-2xl md:text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   {isPlaying ? "pause" : "play_arrow"}
                 </span>
               </button>
 
-              <div className="flex-grow">
-                <div className="flex justify-between items-end mb-2">
-                  <div className="flex flex-col">
-                    <p className="text-[10px] font-black text-primary uppercase tracking-[0.3em] leading-none mb-1 shadow-primary/20">
+              <div className="flex-grow min-w-0">
+                <div className="flex justify-between items-end mb-2 gap-2">
+                  <div className="flex flex-col min-w-0">
+                    <p className="hidden sm:block text-[8px] md:text-[10px] font-black text-primary uppercase tracking-[0.3em] leading-none mb-1">
                       Sonic Architect Output
                     </p>
-                    <h5 className="font-headline font-bold text-lg text-on-surface leading-none tracking-tight">
+                    <h5 className="font-headline font-bold text-sm md:text-lg text-on-surface leading-tight tracking-tight truncate">
                       {currentTrack.title}
                     </h5>
                   </div>
-                  <span className="text-[10px] font-mono text-outline/80 bg-white/5 px-2 py-0.5 rounded leading-none">
+                  <span className="text-[9px] md:text-[10px] font-mono text-outline/80 bg-white/5 px-2 py-0.5 rounded leading-none shrink-0">
                     {Math.floor(progress)}%
                   </span>
                 </div>
 
-                <div ref={waveformRef} className="w-full h-8" />
+                <div ref={waveformRef} className="w-full h-6 md:h-8" />
               </div>
 
               <button
@@ -203,9 +203,9 @@ export default function Showcases() {
                   setCurrentTrack(null);
                   setIsPlaying(false);
                 }}
-                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-outline hover:text-on-surface hover:bg-white/10 transition-all"
+                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 flex items-center justify-center text-outline hover:text-on-surface hover:bg-white/10 transition-all shrink-0"
               >
-                <span className="material-symbols-outlined">close</span>
+                <span className="material-symbols-outlined text-base md:text-xl">close</span>
               </button>
             </div>
           </motion.div>

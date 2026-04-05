@@ -66,12 +66,12 @@ export default function Pricing() {
   const { openModal } = useDevModal();
 
   return (
-    <section id="pricing" className="max-w-7xl mx-auto px-8 py-24 bg-surface-container-lowest">
+    <section id="pricing" className="max-w-7xl mx-auto px-6 md:px-8 py-24 bg-surface-container-lowest">
       <div className="text-center mb-16">
-        <h2 className="font-headline text-4xl font-bold tracking-tight mb-4">
+        <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight mb-4 text-on-surface">
           Choose Your <span className="text-primary">Bandwidth</span>
         </h2>
-        <p className="text-on-surface-variant">
+        <p className="text-on-surface-variant text-sm md:text-base">
           Scalable plans for bedroom producers and major studios.
         </p>
       </div>
@@ -80,7 +80,7 @@ export default function Pricing() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`p-8 border flex flex-col rounded-md relative ${
+            className={`p-6 md:p-8 border flex flex-col rounded-xl relative ${
               plan.type === "pro"
                 ? "bg-surface-container-high border-primary/20 ambient-shadow z-10"
                 : plan.type === "premium"
@@ -95,7 +95,7 @@ export default function Pricing() {
             )}
             <div className="mb-8">
               <h3
-                className={`font-headline text-lg font-medium mb-2 tracking-tight ${
+                className={`font-headline text-base md:text-lg font-medium mb-2 tracking-tight ${
                   plan.type === "pro"
                     ? "text-primary"
                     : plan.type === "premium"
@@ -106,10 +106,10 @@ export default function Pricing() {
                 {plan.name}
               </h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold font-headline text-on-surface tracking-tight">
+                <span className="text-3xl md:text-4xl font-bold font-headline text-on-surface tracking-tight">
                   ${plan.price}
                 </span>
-                <span className="text-outline text-sm">/mo</span>
+                <span className="text-outline text-xs md:text-sm">/mo</span>
               </div>
             </div>
 
@@ -136,14 +136,14 @@ export default function Pricing() {
                       ? "speed"
                       : "check_circle"}
                   </span>
-                  {feature}
+                  <span className="leading-tight">{feature}</span>
                 </li>
               ))}
             </ul>
 
             <button
               onClick={openModal}
-              className={`w-full py-3 rounded-full font-bold transition-all ${
+              className={`w-full py-3 rounded-full font-bold transition-all text-sm md:text-base ${
                 plan.type === "pro"
                   ? "bg-primary text-on-primary hover:brightness-110"
                   : plan.type === "premium"

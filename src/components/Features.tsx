@@ -1,11 +1,11 @@
 export default function Features() {
   return (
-    <section id="features" className="max-w-7xl mx-auto px-8 py-24">
+    <section id="features" className="max-w-7xl mx-auto px-6 md:px-8 py-24">
       <div className="mb-16">
-        <h2 className="font-headline text-4xl font-bold tracking-tight text-on-surface mb-4">
+        <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-4">
           Master Your <span className="text-tertiary">Frequency</span>
         </h2>
-        <p className="text-on-surface-variant max-w-lg">
+        <p className="text-on-surface-variant max-w-lg text-sm md:text-base">
           Advanced tools designed for the precision required in professional audio engineering.
         </p>
       </div>

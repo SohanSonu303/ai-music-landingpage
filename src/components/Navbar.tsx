@@ -18,11 +18,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-panel ambient-shadow">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div className="text-2xl font-bold tracking-tight text-primary font-headline">
+      <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-7xl mx-auto gap-4">
+        <div className="text-lg md:text-2xl font-bold tracking-tight text-primary font-headline whitespace-nowrap">
           AudioWeave Studio
         </div>
-        <div className="hidden md:flex items-center gap-8 font-headline tracking-tight">
+        <div className="hidden lg:flex items-center gap-8 font-headline tracking-tight">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -43,16 +43,16 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4 shrink-0">
           <button
             onClick={openModal}
-            className="hidden sm:block text-slate-400 hover:text-teal-100 transition-colors font-headline text-sm uppercase tracking-widest"
+            className="hidden sm:block text-slate-400 hover:text-teal-100 transition-colors font-headline text-xs md:text-sm uppercase tracking-widest whitespace-nowrap"
           >
             Sign In
           </button>
           <button
             onClick={openModal}
-            className="bg-primary text-on-primary px-6 py-2 rounded-full font-bold font-headline scale-95 active:scale-90 transition-transform hover:brightness-110"
+            className="bg-primary text-on-primary px-4 md:px-6 py-1.5 md:py-2 rounded-full font-bold font-headline text-xs md:text-base scale-95 active:scale-90 transition-transform hover:brightness-110 whitespace-nowrap"
           >
             Start Creating
           </button>
