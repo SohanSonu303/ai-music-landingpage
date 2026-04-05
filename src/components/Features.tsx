@@ -26,7 +26,7 @@ export default function Features() {
             </div>
             <div className="mt-8 flex gap-2">
               <span className="px-3 py-1 bg-surface-container rounded text-xs font-label text-outline">
-                NEURAL ENGINE
+                EMOTION AND MOOD ENGINE
               </span>
               <span className="px-3 py-1 bg-surface-container rounded text-xs font-label text-outline">
                 MULTI-LAYER

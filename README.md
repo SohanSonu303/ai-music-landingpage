@@ -75,6 +75,7 @@ Refer to [AGENTS.md](./AGENTS.md) for more technical specifics on the developmen
 - **`Contact.tsx`**: Sleek support form with refined input styling.
 - **`FAQ.tsx`**: Frequently Asked Questions organized in a clean accordion layout.
 *   **`CTA.tsx`**: Bottom-of-the-page conversion section to drive user sign-ups.
+*   **`Scene3D.tsx`**: A high-performance Three.js particle field that provides a deep, slowly moving 3D background.
 *   **`DevModalContext.tsx`**: A specialized React context that manages the "Development Under Progress" interceptor.
 
 #### App Router (`/src/app`)
